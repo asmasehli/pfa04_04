@@ -1292,7 +1292,265 @@
   },
   "description": "",
   "dialog_nodes": [
+       {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "great !Cette plateforme assure le suivie du stage en temps réel, grâce à un cahier de bord tenu par le stagiaire .semsem-stages.uvt.rnu.tn"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_8_1551130008613",
+      "metadata": {},
+      "conditions": "#semsem",
+      "dialog_node": "node_9_1551130071616"
+    },
     {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "oh! IEEE INSAT est la plus grande branche  dans la région 8, comprenant l'Europe, l'Afrique du Nord et le Moyen-Orient,"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "conditions": "@club_name:IEEE",
+      "dialog_node": "node_6_1551128222651",
+      "previous_sibling": "node_5_1551127829712"
+    },
+    {
+      "type": "response_condition",
+      "output": {},
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "dialog_node": "node_5_1551450052431",
+      "previous_sibling": "node_4_1551126624033"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "c'est un bon choix pour renforcer vos connaissances en développement"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "conditions": "@club_name:netlinks",
+      "dialog_node": "node_4_1551449063544",
+      "previous_sibling": "node_3_1551126347461"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "c'est le meilleur club pour Enrichir votre culture en terme de sécurité informatique.Pour plus d'information contacter la page facebook."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "conditions": "@club_name:securinets",
+      "dialog_node": "node_2_1551126112296",
+      "previous_sibling": "node_6_1551128222651"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "qui dit insat dit des clubs ,l'insat est fameuse par ses activités parascolaires qui sont organisées par le biais d'une vingtaine de clubs .Alors quels club préférer vous?"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "conditions": "true",
+      "dialog_node": "node_4_1551126624033",
+      "previous_sibling": "node_4_1551449063544"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "oh! IEEE est la plus grande branche dans la région 8, comprenant l'Europe, l'Afrique du Nord et le Moyen-Orient..Pour plus d'information contacter la page facebook"
+              }
+            ],
+            "response_type": "text"
+          }
+        ]
+      },
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "conditions": "@club_name:IEEE",
+      "dialog_node": "node_3_1551126347461",
+      "previous_sibling": "node_2_1551126112296"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "source": "",
+            "description": "c'est le meilleur club pour Enrichir votre culture en terme de sécurité informatique.",
+            "response_type": "image"
+          }
+        ]
+      },
+      "parent": "node_1_1551126067774",
+      "metadata": {},
+      "conditions": "@club_name:securinets",
+      "dialog_node": "node_5_1551127829712"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "bon ,je vous remercie! mais soyez courtois et respectueux envers ceux qui vous entourent et votre environnement. "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#respect",
+      "dialog_node": "node_1_1551444314030",
+      "previous_sibling": "node_8_1551130008613"
+    },
+    {
+      "type": "standard",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#semsem",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1551130008613",
+      "digress_out": "allow_all",
+      "previous_sibling": "node_1_1551126067774"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "source": "https://www.bonnesimages.com/image/4942",
+            "description": "merci !  c'est gentil de ta part.",
+            "response_type": "image"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "#politesse",
+      "dialog_node": "node_2_1551445562978",
+      "previous_sibling": "node_1_1551444314030"
+    },
+    {
+      "type": "standard",
+      "title": "informations clubs",
+      "output": {},
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#club",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_1_1551126067774",
+      "digress_out": "allow_all",
+      "previous_sibling": "Bienvenue"
+    },
+    {
+      "type": "standard",
+      "title": "Tout le reste",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Je n'ai pas compris. Vous pouvez essayer de reformuler."
+              },
+              {
+                "text": "Pouvez-vous dire cela autrement ? Je ne comprends pas."
+              },
+              {
+                "text": "Je n'ai pas compris ce que vous voulez dire."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "anything_else",
+      "dialog_node": "Tout le reste",
+      "previous_sibling": "node_2_1551445562978"
+    },
+    {
+      "type": "standard",
+      "title": "Bienvenue",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Bonjour, comment puis-je vous aider ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "metadata": {},
+      "conditions": "welcome",
+      "dialog_node": "Bienvenue"
+    }
+    ,{
       "type": "response_condition",
       "output": {
         "generic": [
